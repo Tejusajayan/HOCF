@@ -1,0 +1,435 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/* FONTS */
+
+:root
+{
+    --px:60px;
+    --radius:5px;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a
+{
+    text-decoration: none;
+}
+button
+{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+span
+{
+    display: inline-block;
+}
+label,img
+{
+    display: block;
+}
+input
+{
+    width: 100%;
+    height: 35px;
+}
+input ::-webkit-inner-spin-button,
+input ::-webkit-outer-spin-button
+{
+    appearance: none;
+    margin: 0;
+}
+::-webkit-scrollbar
+{
+    width: 8px;
+}
+::-webkit-scrollbar-track
+{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: #5C636E;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+}
+.heading
+{
+    font-size: 30px;
+    font-weight: 400;
+    color: #080202;
+    border-bottom: 1px solid #C38154;
+    display: flex;
+    align-items: center;
+    padding: 20px var(--px);
+    gap: 20px;
+}
+.heading i
+{
+    font-size: 40px;
+}
+.item-flex
+{
+    display: flex;
+    flex-grow: 1;
+}
+
+
+.checkout
+{
+    width: 70%;
+    padding: 40px var(--px);
+    background: #fff;
+    border-right: 1px solid #C38154;
+}
+.section-heading
+{
+    color: #4E3636;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.payment-form
+{
+    margin-bottom: 40px;
+}
+.payment-method
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.payment-method .method
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+.payment-method .selected
+{
+    border-color: blue;
+}
+.payment-method .method i
+{
+    font-size: 20px;
+}
+.payment-method .method .checkmark
+{
+    margin-left: auto;
+    color: cornflowerblue;
+}
+.payment-method .method .fill
+{
+    color: blueviolet;
+}
+.label-default
+{
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-size: large;
+    color: brown;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+.input-default
+{
+    background: #FFF;
+    border-radius: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.payment-form .input
+{
+    padding: 10px 15px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.cardholder-name,
+.card-number
+{
+    margin-bottom: 20px;
+}
+.btn
+{
+    border-radius: 5px;
+}
+.btn:active
+{
+    transform: scale(0.99);
+}
+.btn:focus
+{
+    color: #fff;
+    background: #123456;
+    outline: 2px solid black;
+    outline-offset:2px;
+}
+.btn-primary
+{
+    background: #87DFD6;
+    font-weight: 700;
+    color: #fff;
+    padding: 13px 45px;
+}
+.cod
+{
+    margin-left: 5%;
+}
+.btn-primary b
+{
+    margin-right: 10px;
+    font-size: large;
+    color: #000;
+}
+.btn-primary:hover
+{
+    background-color: #5BE7C4;
+    color: #000;
+}
+
+
+.cart
+{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.cart-item-box
+{
+    padding: 40px var(--px);
+    margin-bottom: auto;
+}
+.product-card:not(:last-child)
+{
+    margin-bottom:20px ;
+}
+.product-card .card
+{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.card .product-img
+{
+    border-radius: 5px;
+    width: 110px;
+    height: 110px;
+}
+.card .detail .product-name
+{
+    font-weight: 500;
+    font-size: larger;
+    color: #000;
+    margin-bottom: 10px;
+}
+.card .detail .wrapper
+{
+    display: flex;
+    gap: 20px;
+}
+.product-qty
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#decrement,#increment
+{
+    background-color: #A2D5F2;
+    padding: 7%;
+    font-size: medium;
+    border-radius: 15px;
+}
+.product-qty button
+{
+    background: #123456;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-qty button:active,
+.product-close-btn:active
+{
+    transform: scale(0.95);
+}
+.product-qty button i
+{
+    width: 60%;
+    font-size: 10px;
+}
+#product-close-btn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#product-close-btn i
+{
+    font-size: 25px;
+    color: #658361;    
+}
+.product-close-btn:hover i
+{
+    color: bisque;
+}
+.wrapper-flex
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.wrapper-flex input
+{
+    padding: 12px 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.btn-outline
+{
+    padding: 10px 25px;
+    border: 2px solid black;
+    color: #fff;
+}
+.btn-outline:hover
+{
+    background: #fff;
+    color: #123456;
+}
+.amount
+{
+    padding: 40px var(--px);
+}
+.amount > div
+{
+    display: flex;
+    justify-content: space-between;
+}
+.amount > div:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.amount .total
+{
+    font-size: larger;
+    font-weight: 700;
+    color: chocolate;
+}
+.quantity-input
+{
+    width: 15%;
+    border: none;
+    padding-left: 4%;
+}
+
+@media only screen and (max-width:1200px) 
+{
+    .item-flex
+    {
+        flex-direction: column-reverse;
+    }
+    .checkout
+    {
+        width: 100%;
+        border-right: none;
+    }
+    .btn-primary
+    {
+        width: 100%;
+    }
+    .cart
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .cart .wrapper
+    {
+        margin-top: auto;
+    }
+    .cart .cart-item-box
+    {
+        border-right: 1px solid black;
+        margin-bottom: 0;
+    }
+}
+@media(max-width:768px) 
+{
+    :root
+    {
+        --px:40px;
+    }
+    .cart
+    {
+        grid-template-columns: 1fr;
+    }
+    .wrapper-flex
+    {
+        gap: 20px;
+    }
+    .btn-flex
+    {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media(max-width:567px)
+{
+    :root
+    {
+        --px:20px;
+    }
+    .payment-method,
+    .input-flex
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .payment-method .method
+    {
+        width: 100%;
+    }
+    .product-card .card
+    {
+        width: 100%;
+    }
+    .btn-flex
+    {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .cod
+    {
+        margin-top: 10%;
+        margin-left: -1%;
+    }
+} 
