@@ -130,12 +130,6 @@ STATIC_ROOT=os.path.join(BASE_DIR,'ASSETS')
 RAZOR_KEY_ID='rzp_test_pX8GliFg8F8TDt'
 RAZOR_KEY_SECRET='imIPZ0GJZCd9XM6kJhfXyCIS'
 
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='tejusajayan7@gmail.com'
-EMAIL_HOST_PASSWORD='cajendtguposufeo'
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
